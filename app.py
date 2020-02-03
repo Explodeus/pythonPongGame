@@ -71,7 +71,7 @@ window.onkey(paddle_a_down, 's')
 
 ## Paddle B
 window.onkey(paddle_b_up, 'Up')
-window.onkey(paddle_b_down, 'Down ')
+window.onkey(paddle_b_down, 'Down')
 
 
 # Main loop
@@ -91,3 +91,12 @@ while True:
     if ball.ycor() < -290:
         ball.sety(-290)
         ball.dy *= -1
+
+    ## Horisontal
+    if ball.xcor() > 390:
+        ball.goto(0, 0)
+        ball.dx *= -1
+    
+    if ball.xcor() < -390:
+        ball.goto(0, 0)
+        ball.dx *= -1
