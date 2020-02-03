@@ -1,7 +1,7 @@
 # By @VSokha
 
 # Initializations
-import turtle
+import turtle as turtle
 
 window = turtle.Screen()
 window.title('Pong')
@@ -34,8 +34,44 @@ ball.shape('square')
 ball.color('white') 
 ball.penup()
 ball.goto(0, 0)
+ball.dx = 2
+ball.dy = 2
 
 # Functions
+## Paddle A
+def paddle_a_up():
+    y = paddle_a.ycor()
+    y += 20
+    paddle_a.sety(y)
+
+def paddle_a_down():
+    y = paddle_a.ycor()
+    y -= 20
+    paddle_a.sety(y)
+
+
+## Paddle B
+def paddle_b_up():
+    y = paddle_b.ycor()
+    y += 20
+    paddle_b.sety(y)
+
+def paddle_b_down():
+    y = paddle_b.ycor()
+    y -= 20
+    paddle_b.sety(y)
+
+
+# Keyboard bindings
+window.listen()
+
+## Paddle A
+window.onkey(paddle_a_up, 'w')
+window.onkey(paddle_a_down, 's')
+
+## Paddle B
+window.onkey(paddle_b_up, 'Up')
+window.onkey(paddle_b_down, 'Down ')
 
 
 # Main loop
