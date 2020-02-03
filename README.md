@@ -3,3 +3,7 @@
 2. Go to game folder: `cd pythonPongGame`
 3. Install dependencies: `pip insatll turtle`
 4. Run app: `python app.py`
+
+# Dependencies
+1. `turtle: latest`
+2. `python: 2.7`
